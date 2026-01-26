@@ -3,22 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>💕 Silvia & Andrea - Ci Sposiamo! - 21 Giugno 2026</title>
+    <title>Silvia & Andrea - Ci Sposiamo! - 21 Giugno 2026</title>
     
-    <!-- Meta tags per WhatsApp/Social Preview -->
-    <meta name="description" content="Silvia e Andrea si sposano! 💍 21 Giugno 2026 • Agriturismo Larice, Clusone (BG)">
-    
-    <!-- Open Graph per WhatsApp/Facebook -->
-    <meta property="og:title" content="💍 Silvia & Andrea - Ci Sposiamo!">
-    <meta property="og:description" content="Save the Date • 21 Giugno 2026 • Agriturismo Larice, Clusone (BG) • Vi aspettiamo!">
+    <meta name="description" content="21 Giugno 2026 • Agriturismo Larice, Clusone (BG) • Cerimonia simbolica tra le montagne bergamasche">
+    <meta property="og:title" content="💕 Silvia & Andrea - Ci Sposiamo! 💕">
+    <meta property="og:description" content="21 Giugno 2026 • Agriturismo Larice, Clusone (BG) • Cerimonia simbolica tra le montagne bergamasche">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
-    <meta property="og:site_name" content="Matrimonio Silvia & Andrea">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="💍 Silvia & Andrea - Ci Sposiamo!">
-    <meta name="twitter:description" content="Save the Date • 21 Giugno 2026 • Agriturismo Larice, Clusone">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap" rel="stylesheet">
     
     <style>
         * {
@@ -27,262 +22,252 @@
             box-sizing: border-box;
         }
         
-        html {
-            font-size: 16px;
-        }
-        
         body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd0 100%);
-            padding: 15px;
+            font-family: 'Montserrat', sans-serif;
+            background: #f5f3ef;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
         
-        .container {
+        .card {
             width: 100%;
-            max-width: 550px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            max-width: 480px;
+            background: #fff;
+            box-shadow: 0 4px 30px rgba(0,0,0,0.12);
             overflow: hidden;
         }
         
-        .header {
-            background: linear-gradient(135deg, #8b7355 0%, #6b5744 100%);
-            color: white;
-            padding: 35px 25px;
-            text-align: center;
-        }
-        
-        .header h1 {
-            font-size: clamp(1.8rem, 6vw, 2.5rem);
-            font-weight: 300;
-            letter-spacing: 2px;
-        }
-        
-        .header .ampersand {
-            font-size: 1.3em;
-            font-style: italic;
-            margin: 0 8px;
-            opacity: 0.9;
-        }
-        
+        /* Content */
         .content {
-            padding: 35px 25px;
-        }
-        
-        /* SAVE THE DATE + CI SPOSIAMO */
-        .announcement {
+            padding: 40px 30px 30px;
             text-align: center;
-            margin-bottom: 25px;
+            background: #fff;
         }
         
         .save-the-date-label {
-            font-size: 0.75rem;
+            font-size: 0.65rem;
             letter-spacing: 4px;
             text-transform: uppercase;
-            color: #a89880;
-            margin-bottom: 10px;
-        }
-        
-        .ci-sposiamo {
-            font-size: clamp(1.6rem, 5vw, 2.2rem);
-            color: #8b7355;
-            font-style: italic;
+            color: #666;
+            margin-bottom: 25px;
             font-weight: 400;
         }
         
-        .divider {
-            width: 80px;
-            height: 2px;
-            background: linear-gradient(to right, transparent, #8b7355, transparent);
-            margin: 25px auto;
+        .names {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 8vw, 2.6rem);
+            color: #1a1a1a;
+            line-height: 1.2;
+            font-weight: 500;
+            margin-bottom: 5px;
         }
         
-        /* DATA */
-        .date-highlight {
-            background: #8b7355;
-            color: white;
-            padding: 20px 15px;
-            text-align: center;
-            border-radius: 10px;
-            margin: 20px 0;
-        }
-        
-        .date-highlight .day {
-            font-size: clamp(2.5rem, 10vw, 3.5rem);
-            font-weight: bold;
+        .ampersand {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 400;
             display: block;
+            font-size: 0.6em;
+            color: #333;
+            margin: 5px 0;
+        }
+        
+        .ci-sposiamo {
+            font-size: 0.7rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #444;
+            margin: 20px 0 30px;
+            font-weight: 400;
+        }
+        
+        /* Date section - like reference */
+        .date-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .date-box {
+            text-align: center;
+            border: 1px solid #ddd;
+            padding: 12px 18px;
+        }
+        
+        .date-box .number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: #1a1a1a;
             line-height: 1;
         }
         
-        .date-highlight .month-year {
-            font-size: clamp(1rem, 4vw, 1.3rem);
+        .date-box .label {
+            font-size: 0.6rem;
             letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #666;
             margin-top: 5px;
         }
         
-        .date-highlight .subtitle {
+        .location-box {
+            text-align: left;
+            max-width: 180px;
+        }
+        
+        .location-box .venue {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: #1a1a1a;
+            font-weight: 500;
+            margin-bottom: 3px;
+        }
+        
+        .location-box .address {
+            font-size: 0.7rem;
+            color: #555;
+            line-height: 1.4;
+        }
+        
+        .ceremony-note {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.1rem;
+            color: #333;
             margin-top: 8px;
-            font-size: 0.85rem;
-            opacity: 0.9;
-            font-style: italic;
         }
         
-        /* DETTAGLI */
+        /* Details */
         .details {
-            background: #faf8f5;
-            border-left: 4px solid #8b7355;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .detail-item {
-            margin: 12px 0;
+            margin: 25px 0 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
         }
         
         .detail-label {
-            font-weight: bold;
-            color: #5a4a3a;
-            font-size: 0.8rem;
+            font-size: 0.6rem;
+            letter-spacing: 3px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 4px;
+            color: #888;
+            margin-bottom: 6px;
         }
         
         .detail-value {
-            color: #6b5744;
-            font-size: 1rem;
-            line-height: 1.5;
+            font-size: 0.85rem;
+            color: #333;
+            line-height: 1.6;
         }
         
-        /* LINK */
         .link-container {
-            text-align: center;
-            margin: 25px 0;
+            margin: 20px 0 5px;
         }
         
         .location-link {
             display: inline-block;
-            background: #6b5744;
-            color: white;
-            padding: 12px 28px;
+            color: #333;
+            padding: 10px 24px;
             text-decoration: none;
-            border-radius: 25px;
-            font-size: 0.9rem;
+            border: 1px solid #999;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
             transition: all 0.3s ease;
         }
         
         .location-link:hover {
-            background: #8b7355;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(107, 87, 68, 0.3);
+            background: #333;
+            color: white;
+            border-color: #333;
         }
         
-        /* FOOTER */
+        /* Footer */
         .footer {
+            padding: 20px 30px 15px;
             text-align: center;
-            padding: 30px 25px;
-            background: #faf8f5;
-            color: #8b7355;
+            background: #fff;
         }
         
         .footer-text {
-            font-style: italic;
-            font-size: 0.95rem;
+            font-size: 0.8rem;
             line-height: 1.6;
-            color: #6b5744;
-            margin-bottom: 15px;
+            color: #555;
+            margin-bottom: 12px;
+            font-style: italic;
         }
         
         .signature {
-            font-size: 0.9rem;
-            color: #8b7355;
+            font-size: 0.6rem;
+            letter-spacing: 2px;
+            color: #888;
+            text-transform: uppercase;
         }
         
-        .signature strong {
-            display: block;
-            font-size: 1.15rem;
-            letter-spacing: 1px;
+        .signature-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.6rem;
+            color: #1a1a1a;
             margin-top: 5px;
-            color: #6b5744;
         }
         
-        /* RESPONSIVE */
+        /* Mountain image */
+        .mountain-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
         @media (max-width: 480px) {
-            body {
-                padding: 10px;
+            body { padding: 12px; }
+            .content { padding: 30px 22px 25px; }
+            .footer { padding: 18px 22px 12px; }
+            .date-row { 
+                flex-direction: column;
+                gap: 15px;
             }
-            
-            .header {
-                padding: 30px 20px;
-            }
-            
-            .content {
-                padding: 25px 18px;
-            }
-            
-            .details {
-                padding: 15px;
-            }
-            
-            .footer {
-                padding: 25px 18px;
-            }
-        }
-        
-        @media (min-width: 768px) {
-            .container {
-                max-width: 580px;
-            }
-            
-            .header {
-                padding: 45px 35px;
-            }
-            
-            .content {
-                padding: 40px 35px;
+            .location-box {
+                text-align: center;
+                max-width: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Silvia <span class="ampersand">&</span> Andrea</h1>
-        </div>
-        
+    <div class="card">
+        <!-- Content -->
         <div class="content">
-            <div class="announcement">
-                <div class="save-the-date-label">Save the Date</div>
-                <div class="ci-sposiamo">Ci Sposiamo!</div>
+            <div class="save-the-date-label">Save the Date</div>
+            
+            <div class="names">
+                SILVIA
+                <span class="ampersand">&</span>
+                ANDREA
             </div>
             
-            <div class="date-highlight">
-                <span class="day">21</span>
-                <div class="month-year">GIUGNO 2026</div>
-                <div class="subtitle">Il primo giorno d'estate</div>
+            <div class="ci-sposiamo">Vi invitano al loro matrimonio</div>
+            
+            <!-- Date and Location row -->
+            <div class="date-row">
+                <div class="date-box">
+                    <div class="number">21</div>
+                    <div class="label">Giugno 2026</div>
+                </div>
+                
+                <div class="location-box">
+                    <div class="venue">Agriturismo Larice</div>
+                    <div class="address">Via Valeda 15,<br>Clusone (BG)</div>
+                    <div class="ceremony-note">Cerimonia a seguire</div>
+                </div>
             </div>
             
             <div class="details">
-                <div class="detail-item">
-                    <div class="detail-label">Dove</div>
-                    <div class="detail-value">
-                        <strong>Agriturismo Larice</strong><br>
-                        Via Valeda 15, Clusone (BG)
-                    </div>
-                </div>
-                
-                <div class="detail-item">
-                    <div class="detail-label">Cerimonia</div>
-                    <div class="detail-value">
-                        Una promessa d'amore immersi nella natura<br>
-                        all'Agriturismo Larice, tra le montagne bergamasche
-                    </div>
+                <div class="detail-label">Cerimonia</div>
+                <div class="detail-value">
+                    Una promessa d'amore immersi nella natura,<br>
+                    tra le montagne bergamasche
                 </div>
             </div>
             
@@ -293,16 +278,18 @@
             </div>
         </div>
         
+        <!-- Footer -->
         <div class="footer">
             <div class="footer-text">
                 Non vediamo l'ora di abbracciarvi e di festeggiare insieme a voi<br>
                 questo giorno che sogniamo da tanto!
             </div>
-            <div class="signature">
-                Con affetto,
-                <strong>Silvia & Andrea</strong>
-            </div>
+            <div class="signature">Con affetto,</div>
+            <div class="signature-names">Silvia & Andrea</div>
         </div>
+        
+        <!-- Mountain image at bottom -->
+        <img src="montagne.png" alt="Montagne" class="mountain-image">
     </div>
 </body>
 </html>
