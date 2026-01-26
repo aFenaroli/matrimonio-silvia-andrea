@@ -2,22 +2,24 @@
 <html lang="it">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💕 Silvia & Andrea - 21 Giugno 2026 - Ci Sposiamo! 💕</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>💕 Silvia & Andrea - Ci Sposiamo! - 21 Giugno 2026</title>
     
-    <!-- Meta tags per preview social/WhatsApp -->
-    <meta name="description" content="Silvia e Andrea si sposano il 21 Giugno 2026 all'Agriturismo Larice di Clusone. Ci sposiamo! 💕">
+    <!-- Meta tags per WhatsApp/Social Preview -->
+    <meta name="description" content="Silvia e Andrea si sposano! 💍 21 Giugno 2026 • Agriturismo Larice, Clusone (BG)">
     
-    <!-- Open Graph per preview -->
-    <meta property="og:title" content="💕 Silvia & Andrea - Ci Sposiamo! 💕">
-    <meta property="og:description" content="21 Giugno 2026 • Agriturismo Larice, Clusone (BG) • Cerimonia simbolica e pranzo immersi nelle montagne bergamasche">
+    <!-- Open Graph per WhatsApp/Facebook -->
+    <meta property="og:title" content="💍 Silvia & Andrea - Ci Sposiamo!">
+    <meta property="og:description" content="Save the Date • 21 Giugno 2026 • Agriturismo Larice, Clusone (BG) • Vi aspettiamo!">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="it_IT">
+    <meta property="og:site_name" content="Matrimonio Silvia & Andrea">
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="💕 Silvia & Andrea - Ci Sposiamo!">
-    <meta name="twitter:description" content="21 Giugno 2026 • Agriturismo Larice, Clusone • Un giorno speciale tra le montagne">
+    <meta name="twitter:title" content="💍 Silvia & Andrea - Ci Sposiamo!">
+    <meta name="twitter:description" content="Save the Date • 21 Giugno 2026 • Agriturismo Larice, Clusone">
+    
     <style>
         * {
             margin: 0;
@@ -25,10 +27,14 @@
             box-sizing: border-box;
         }
         
+        html {
+            font-size: 16px;
+        }
+        
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
             background: linear-gradient(135deg, #f5f0e8 0%, #e8dfd0 100%);
-            padding: 20px;
+            padding: 15px;
             min-height: 100vh;
             display: flex;
             align-items: center;
@@ -36,7 +42,8 @@
         }
         
         .container {
-            max-width: 600px;
+            width: 100%;
+            max-width: 550px;
             background: white;
             border-radius: 15px;
             box-shadow: 0 10px 40px rgba(0,0,0,0.1);
@@ -46,154 +53,199 @@
         .header {
             background: linear-gradient(135deg, #8b7355 0%, #6b5744 100%);
             color: white;
-            padding: 40px 30px;
+            padding: 35px 25px;
             text-align: center;
         }
         
         .header h1 {
-            font-size: 2.5em;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
             font-weight: 300;
-            letter-spacing: 3px;
-            margin-bottom: 10px;
+            letter-spacing: 2px;
         }
         
         .header .ampersand {
-            font-size: 1.5em;
+            font-size: 1.3em;
             font-style: italic;
-            margin: 0 10px;
+            margin: 0 8px;
             opacity: 0.9;
         }
         
         .content {
-            padding: 40px 30px;
+            padding: 35px 25px;
         }
         
-        .invitation-text {
+        /* SAVE THE DATE + CI SPOSIAMO */
+        .announcement {
             text-align: center;
-            font-size: 1.1em;
-            color: #5a4a3a;
-            line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
+        }
+        
+        .save-the-date-label {
+            font-size: 0.75rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: #a89880;
+            margin-bottom: 10px;
+        }
+        
+        .ci-sposiamo {
+            font-size: clamp(1.6rem, 5vw, 2.2rem);
+            color: #8b7355;
+            font-style: italic;
+            font-weight: 400;
         }
         
         .divider {
-            width: 100px;
+            width: 80px;
             height: 2px;
             background: linear-gradient(to right, transparent, #8b7355, transparent);
-            margin: 30px auto;
+            margin: 25px auto;
         }
         
-        .details {
-            background: #faf8f5;
-            border-left: 4px solid #8b7355;
-            padding: 25px;
-            margin: 25px 0;
-            border-radius: 5px;
-        }
-        
-        .detail-item {
-            margin: 15px 0;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .detail-icon {
-            font-size: 1.3em;
-            margin-right: 15px;
-            color: #8b7355;
-            min-width: 25px;
-        }
-        
-        .detail-content {
-            flex: 1;
-        }
-        
-        .detail-label {
-            font-weight: bold;
-            color: #5a4a3a;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
-        }
-        
-        .detail-value {
-            color: #6b5744;
-            font-size: 1.1em;
-            line-height: 1.6;
-        }
-        
+        /* DATA */
         .date-highlight {
             background: #8b7355;
             color: white;
-            padding: 20px;
+            padding: 20px 15px;
             text-align: center;
             border-radius: 10px;
-            margin: 25px 0;
+            margin: 20px 0;
         }
         
         .date-highlight .day {
-            font-size: 3em;
+            font-size: clamp(2.5rem, 10vw, 3.5rem);
             font-weight: bold;
             display: block;
             line-height: 1;
         }
         
         .date-highlight .month-year {
-            font-size: 1.3em;
+            font-size: clamp(1rem, 4vw, 1.3rem);
             letter-spacing: 2px;
             margin-top: 5px;
+        }
+        
+        .date-highlight .subtitle {
+            margin-top: 8px;
+            font-size: 0.85rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+        
+        /* DETTAGLI */
+        .details {
+            background: #faf8f5;
+            border-left: 4px solid #8b7355;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .detail-item {
+            margin: 12px 0;
+        }
+        
+        .detail-label {
+            font-weight: bold;
+            color: #5a4a3a;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+        
+        .detail-value {
+            color: #6b5744;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        /* LINK */
+        .link-container {
+            text-align: center;
+            margin: 25px 0;
         }
         
         .location-link {
             display: inline-block;
             background: #6b5744;
             color: white;
-            padding: 12px 25px;
+            padding: 12px 28px;
             text-decoration: none;
             border-radius: 25px;
-            margin-top: 20px;
-            transition: background 0.3s;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
         }
         
         .location-link:hover {
             background: #8b7355;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(107, 87, 68, 0.3);
         }
         
-        .note {
-            background: #fff9e6;
-            border-left: 4px solid #f4a460;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 5px;
-            font-size: 0.95em;
+        /* FOOTER */
+        .footer {
+            text-align: center;
+            padding: 30px 25px;
+            background: #faf8f5;
+            color: #8b7355;
+        }
+        
+        .footer-text {
+            font-style: italic;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #6b5744;
+            margin-bottom: 15px;
+        }
+        
+        .signature {
+            font-size: 0.9rem;
+            color: #8b7355;
+        }
+        
+        .signature strong {
+            display: block;
+            font-size: 1.15rem;
+            letter-spacing: 1px;
+            margin-top: 5px;
             color: #6b5744;
         }
         
-        .footer {
-            text-align: center;
-            padding: 30px;
-            background: #faf8f5;
-            color: #8b7355;
-            font-style: italic;
-        }
-        
-        .hearts {
-            font-size: 1.5em;
-            margin: 15px 0;
-        }
-        
-        @media (max-width: 600px) {
-            .header h1 {
-                font-size: 2em;
+        /* RESPONSIVE */
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
             }
             
-            .date-highlight .day {
-                font-size: 2.5em;
+            .header {
+                padding: 30px 20px;
             }
             
             .content {
-                padding: 30px 20px;
+                padding: 25px 18px;
+            }
+            
+            .details {
+                padding: 15px;
+            }
+            
+            .footer {
+                padding: 25px 18px;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .container {
+                max-width: 580px;
+            }
+            
+            .header {
+                padding: 45px 35px;
+            }
+            
+            .content {
+                padding: 40px 35px;
             }
         }
     </style>
@@ -201,111 +253,55 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>
-                Silvia <span class="ampersand">&</span> Andrea
-            </h1>
+            <h1>Silvia <span class="ampersand">&</span> Andrea</h1>
         </div>
         
         <div class="content">
-            <div class="invitation-text">
-                <p style="font-size: 1.2em; margin-bottom: 20px;">
-                    Abbiamo scelto di dirci "Sì" in uno dei luoghi che più amiamo,<br>
-                    circondati dalla bellezza delle montagne e dalla genuinità della natura.
-                </p>
-                <p style="margin-bottom: 20px;">
-                    Sarà un giorno speciale, reso ancora più magico dalla presenza<br>
-                    delle persone che amiamo e che rendono la nostra vita meravigliosa.
-                </p>
-                <p style="font-weight: bold; font-size: 1.1em; color: #8b7355;">
-                    E voi siete tra queste! ❤️
-                </p>
+            <div class="announcement">
+                <div class="save-the-date-label">Save the Date</div>
+                <div class="ci-sposiamo">Ci Sposiamo!</div>
             </div>
-            
-            <div class="divider"></div>
             
             <div class="date-highlight">
                 <span class="day">21</span>
                 <div class="month-year">GIUGNO 2026</div>
-                <div style="margin-top: 10px; font-size: 0.9em; opacity: 0.9;">Il primo giorno d'estate</div>
-            </div>
-            
-            <div class="invitation-text" style="margin: 30px 0; font-size: 1em;">
-                <p style="line-height: 2;">
-                    Vi aspettiamo per una cerimonia simbolica all'aperto,<br>
-                    seguita da un pranzo dove condivideremo cibo genuino,<br>
-                    risate, emozioni e tanta, tanta felicità.
-                </p>
+                <div class="subtitle">Il primo giorno d'estate</div>
             </div>
             
             <div class="details">
                 <div class="detail-item">
-                    <div class="detail-icon">🏔️</div>
-                    <div class="detail-content">
-                        <div class="detail-label">La nostra Location</div>
-                        <div class="detail-value">
-                            <strong>Agriturismo Larice</strong><br>
-                            Un angolo di paradiso tra le montagne bergamasche,<br>
-                            dove tradizione e natura si incontrano<br>
-                            <br>
-                            Via Valeda 15, Clusone (BG)
-                        </div>
+                    <div class="detail-label">Dove</div>
+                    <div class="detail-value">
+                        <strong>Agriturismo Larice</strong><br>
+                        Via Valeda 15, Clusone (BG)
                     </div>
                 </div>
                 
                 <div class="detail-item">
-                    <div class="detail-icon">💒</div>
-                    <div class="detail-content">
-                        <div class="detail-label">La Cerimonia</div>
-                        <div class="detail-value">
-                            Una promessa d'amore immersi nella natura,<br>
-                            con vista sulle nostre amate montagne
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="detail-item">
-                    <div class="detail-icon">🍽️</div>
-                    <div class="detail-content">
-                        <div class="detail-label">Il Pranzo</div>
-                        <div class="detail-value">
-                            Sapori autentici della tradizione bergamasca,<br>
-                            preparati con prodotti dell'azienda agricola.<br>
-                            Buon cibo, buon vino e tanta allegria!
-                        </div>
+                    <div class="detail-label">Cerimonia</div>
+                    <div class="detail-value">
+                        Una promessa d'amore immersi nella natura<br>
+                        all'Agriturismo Larice, tra le montagne bergamasche
                     </div>
                 </div>
             </div>
             
-            <div class="note">
-                ⏰ L'orario esatto della cerimonia vi sarà comunicato nelle prossime settimane.<br>
-                Nel frattempo, segnatevi la data e preparate il sorriso migliore! 😊
-            </div>
-            
-            <div style="text-align: center;">
+            <div class="link-container">
                 <a href="https://agriturismolarice.com/" class="location-link" target="_blank">
-                    🏔️ Scopri la Location
+                    Scopri la Location
                 </a>
-            </div>
-            
-            <div class="divider"></div>
-            
-            <div class="invitation-text" style="margin: 30px 0; font-style: italic; font-size: 1em; color: #6b5744;">
-                "L'amore è quella condizione in cui la felicità di un'altra persona<br>
-                è essenziale per la propria."<br>
-                <span style="font-size: 0.9em; opacity: 0.8;">— Robert A. Heinlein</span>
             </div>
         </div>
         
         <div class="footer">
-            <div class="hearts">💕 💑 💕</div>
-            <p style="font-size: 1.1em; margin-bottom: 10px;">
+            <div class="footer-text">
                 Non vediamo l'ora di abbracciarvi e di festeggiare insieme a voi<br>
                 questo giorno che sogniamo da tanto!
-            </p>
-            <p style="margin-top: 20px; font-size: 0.95em;">
-                Con affetto,<br>
-                <strong style="font-size: 1.2em; letter-spacing: 1px;">Silvia & Andrea</strong>
-            </p>
+            </div>
+            <div class="signature">
+                Con affetto,
+                <strong>Silvia & Andrea</strong>
+            </div>
         </div>
     </div>
 </body>
