@@ -24,25 +24,25 @@
         
         html, body {
             height: 100%;
+            overflow: hidden;
         }
         
         body {
             font-family: 'Montserrat', sans-serif;
             background: #f5f3ef;
-            min-height: 100vh;
-            min-height: 100dvh;
+            height: 100vh;
+            height: 100dvh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 8px;
+            padding: 5px;
         }
         
         .card {
             width: 100%;
-            max-width: 420px;
-            height: calc(100vh - 16px);
-            height: calc(100dvh - 16px);
-            max-height: 750px;
+            max-width: 400px;
+            height: calc(100vh - 10px);
+            height: calc(100dvh - 10px);
             background-image: url('sfondo-montagne.png');
             background-size: cover;
             background-position: center;
@@ -55,26 +55,19 @@
         
         /* Content */
         .content {
-            padding: 20px 15px 12px;
+            padding: 12px 12px 6px;
             text-align: center;
             flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-        }
-        
-        .main-content {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
+            justify-content: space-around;
         }
         
         .names {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.5rem, 6vw, 2rem);
+            font-size: clamp(1.4rem, 5.5vw, 1.8rem);
             color: #1a1a1a;
-            line-height: 1.15;
+            line-height: 1.1;
             font-weight: 500;
         }
         
@@ -83,17 +76,17 @@
             font-style: italic;
             font-weight: 400;
             display: block;
-            font-size: 0.55em;
+            font-size: 0.5em;
             color: #333;
-            margin: 2px 0;
+            margin: 1px 0;
         }
         
         .ci-sposiamo {
-            font-size: 0.55rem;
+            font-size: 0.5rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #444;
-            margin: 12px 0 18px;
+            margin: 6px 0;
             font-weight: 400;
         }
         
@@ -102,14 +95,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 12px 0;
-            gap: 0;
+            margin: 6px 0;
         }
         
         .info-item {
             text-align: center;
-            padding: 0 10px;
-            flex: 0 0 auto;
+            padding: 0 8px;
         }
         
         .info-item:not(:last-child) {
@@ -118,62 +109,62 @@
         
         .info-item .number {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            font-size: clamp(1.1rem, 3.5vw, 1.3rem);
             font-weight: 500;
             color: #1a1a1a;
-            line-height: 1.2;
+            line-height: 1.1;
         }
         
         .info-item .label {
-            font-size: 0.5rem;
+            font-size: 0.45rem;
             letter-spacing: 1px;
             text-transform: uppercase;
             color: #666;
-            margin-top: 2px;
+            margin-top: 1px;
         }
         
         .info-item .venue {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(0.7rem, 2.5vw, 0.85rem);
+            font-size: clamp(0.65rem, 2.2vw, 0.75rem);
             color: #1a1a1a;
             font-weight: 500;
-            line-height: 1.2;
+            line-height: 1.15;
         }
         
         .info-item .address {
-            font-size: 0.5rem;
+            font-size: 0.45rem;
             color: #555;
-            line-height: 1.2;
+            line-height: 1.15;
             margin-top: 1px;
         }
         
         /* Info section */
         .info-section {
-            margin: 12px 0;
-            padding: 10px 5px;
+            margin: 6px 0;
+            padding: 6px 0;
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
         }
         
         .info-text {
-            font-size: 0.7rem;
+            font-size: 0.6rem;
             color: #444;
-            line-height: 1.5;
+            line-height: 1.4;
             font-style: italic;
         }
         
         .link-container {
-            margin: 10px 0 0;
+            margin: 6px 0 0;
         }
         
         .location-link {
             display: inline-block;
             color: #333;
-            padding: 8px 18px;
+            padding: 6px 14px;
             text-decoration: none;
             border: 1px solid #999;
-            font-size: 0.5rem;
-            letter-spacing: 2px;
+            font-size: 0.45rem;
+            letter-spacing: 1.5px;
             text-transform: uppercase;
             transition: all 0.3s ease;
         }
@@ -186,30 +177,30 @@
         
         /* Footer */
         .footer {
-            padding: 10px 15px 8px;
+            padding: 6px 12px 4px;
             text-align: center;
         }
         
         .footer-text {
-            font-size: 0.65rem;
-            line-height: 1.5;
+            font-size: 0.55rem;
+            line-height: 1.4;
             color: #555;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             font-style: italic;
         }
         
         .signature {
-            font-size: 0.5rem;
-            letter-spacing: 2px;
+            font-size: 0.45rem;
+            letter-spacing: 1.5px;
             color: #888;
             text-transform: uppercase;
         }
         
         .signature-names {
             font-family: 'Great Vibes', cursive;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #1a1a1a;
-            margin-top: 2px;
+            margin-top: 1px;
         }
         
         /* Mountain image */
@@ -220,43 +211,15 @@
         
         .mountain-image {
             width: 100%;
-            height: auto;
+            height: 18vh;
             display: block;
-            max-height: 25vh;
             object-fit: cover;
             object-position: top;
         }
         
-        @media (max-height: 650px) {
-            .content {
-                padding: 15px 12px 8px;
-            }
-            
-            .ci-sposiamo {
-                margin: 8px 0 12px;
-            }
-            
-            .info-row {
-                margin: 8px 0;
-            }
-            
-            .info-section {
-                margin: 8px 0;
-                padding: 8px 5px;
-            }
-            
-            .footer {
-                padding: 8px 12px 5px;
-            }
-            
-            .mountain-image {
-                max-height: 20vh;
-            }
-        }
-        
         @media (max-width: 350px) {
             .info-item {
-                padding: 0 6px;
+                padding: 0 5px;
             }
         }
     </style>
@@ -265,48 +228,46 @@
     <div class="card">
         <!-- Content -->
         <div class="content">
-            <div class="main-content">
-                <div>
-                    <div class="names">
-                        SILVIA
-                        <span class="ampersand">&</span>
-                        ANDREA
-                    </div>
-                    
-                    <div class="ci-sposiamo">Vi invitano al loro matrimonio</div>
+            <div>
+                <div class="names">
+                    SILVIA
+                    <span class="ampersand">&</span>
+                    ANDREA
                 </div>
                 
-                <!-- Date, Time and Location row -->
-                <div class="info-row">
-                    <div class="info-item">
-                        <div class="number">21</div>
-                        <div class="label">Giugno 2026</div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="number">11:00</div>
-                        <div class="label">del mattino</div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <div class="venue">Agriturismo<br>Larice</div>
-                        <div class="address">Via Valeda 15,<br>Clusone (BG)</div>
-                    </div>
+                <div class="ci-sposiamo">Vi invitano al loro matrimonio</div>
+            </div>
+            
+            <!-- Date, Time and Location row -->
+            <div class="info-row">
+                <div class="info-item">
+                    <div class="number">21</div>
+                    <div class="label">Giugno 2026</div>
                 </div>
                 
-                <!-- Info section -->
-                <div class="info-section">
-                    <div class="info-text">
-                        La cerimonia si svolgerà presso l'Agriturismo Larice,<br>
-                        dove seguiranno pranzo e festeggiamenti.
-                    </div>
+                <div class="info-item">
+                    <div class="number">11:00</div>
+                    <div class="label">del mattino</div>
                 </div>
                 
-                <div class="link-container">
-                    <a href="https://agriturismolarice.com/" class="location-link" target="_blank">
-                        Scopri la Location
-                    </a>
+                <div class="info-item">
+                    <div class="venue">Agriturismo<br>Larice</div>
+                    <div class="address">Via Valeda 15,<br>Clusone (BG)</div>
                 </div>
+            </div>
+            
+            <!-- Info section -->
+            <div class="info-section">
+                <div class="info-text">
+                    La cerimonia si svolgerà presso l'Agriturismo Larice,<br>
+                    dove seguiranno pranzo e festeggiamenti.
+                </div>
+            </div>
+            
+            <div class="link-container">
+                <a href="https://agriturismolarice.com/" class="location-link" target="_blank">
+                    Scopri la Location
+                </a>
             </div>
             
             <!-- Footer -->
