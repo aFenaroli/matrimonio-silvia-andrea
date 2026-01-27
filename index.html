@@ -43,10 +43,11 @@
             max-width: 420px;
             height: calc(100vh - 10px);
             height: calc(100dvh - 10px);
-            background-image: url('sfondo-montagne.png');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            /* Doppio sfondo: montagne in basso + pattern generale */
+            background-image: url('montagne.png'), url('sfondo-montagne.png');
+            background-position: bottom center, center;
+            background-size: 100% auto, cover;
+            background-repeat: no-repeat, no-repeat;
             box-shadow: 0 4px 30px rgba(0,0,0,0.12);
             overflow: hidden;
             display: flex;
@@ -116,8 +117,7 @@
         
         .info-item .label {
             font-size: 0.55rem;
-            letter-spacing: 1px;<!-- 
-            text-transform: uppercase; -->
+            letter-spacing: 1px;
             color: #666;
             margin-top: 2px;
         }
@@ -199,16 +199,13 @@
             font-size: 1.4rem;
             color: #1a1a1a;
             margin-top: 8px;
-            margin-bottom: -18px;
+            margin-bottom: 0;
         }
         
-        /* Mountain image - intera */
-        .mountain-image {
-            width: 100%;
-            height: auto;
-            display: block;
+        /* Spazio per le montagne in basso */
+        .mountain-spacer {
+            height: 38vh;
             flex-shrink: 0;
-            margin-top: 0;
         }
         
         @media (max-width: 350px) {
@@ -235,7 +232,7 @@
             <div class="info-row">
                 <div class="info-item">
                     <div class="number">21 giugno</div> 
-                    <div class="address"> 2026</div>
+                    <div class="address">2026</div>
                 </div>
                 
                 <div class="info-item">
@@ -275,8 +272,8 @@
             </div>
         </div>
         
-        <!-- Mountain image at bottom - INTERA -->
-        <img src="montagne.png" alt="Montagne" class="mountain-image">
+        <!-- Spacer per le montagne di sfondo -->
+        <div class="mountain-spacer"></div>
     </div>
 </body>
 </html>
