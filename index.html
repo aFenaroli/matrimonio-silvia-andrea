@@ -35,21 +35,23 @@
         .card {
             width: 100%;
             max-width: 480px;
-            background: #fff;
+            background-image: url('sfondo-montagne.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             box-shadow: 0 4px 30px rgba(0,0,0,0.12);
             overflow: hidden;
         }
         
         /* Content */
         .content {
-            padding: 40px 30px 25px;
+            padding: 40px 20px 25px;
             text-align: center;
-            background: #fff;
         }
         
         .names {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2rem, 8vw, 2.6rem);
+            font-size: clamp(1.8rem, 8vw, 2.6rem);
             color: #1a1a1a;
             line-height: 1.2;
             font-weight: 500;
@@ -67,7 +69,7 @@
         }
         
         .ci-sposiamo {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
             letter-spacing: 3px;
             text-transform: uppercase;
             color: #444;
@@ -75,85 +77,62 @@
             font-weight: 400;
         }
         
-        /* Date section */
-        .date-row {
+        /* Date, Time, Location row */
+        .info-row {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 25px;
             margin: 25px 0;
+            gap: 0;
         }
         
-        .date-box {
+        .info-item {
             text-align: center;
-            border: 1px solid #ddd;
-            padding: 15px 20px;
-            min-width: 100px;
+            padding: 0 12px;
+            flex: 0 0 auto;
         }
         
-        .date-box .number {
+        .info-item:not(:last-child) {
+            border-right: 1px solid #ccc;
+        }
+        
+        .info-item .number {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
+            font-size: clamp(1.4rem, 5vw, 2rem);
             font-weight: 500;
             color: #1a1a1a;
-            line-height: 1;
+            line-height: 1.2;
         }
         
-        .date-box .label {
-            font-size: 0.6rem;
-            letter-spacing: 2px;
+        .info-item .label {
+            font-size: clamp(0.5rem, 2vw, 0.6rem);
+            letter-spacing: 1px;
             text-transform: uppercase;
             color: #666;
-            margin-top: 5px;
+            margin-top: 3px;
         }
         
-        .time-box {
-            text-align: center;
-            border: 1px solid #ddd;
-            padding: 15px 20px;
-            min-width: 100px;
-        }
-        
-        .time-box .number {
+        .info-item .venue {
             font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            font-weight: 500;
-            color: #1a1a1a;
-            line-height: 1;
-        }
-        
-        .time-box .label {
-            font-size: 0.6rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #666;
-            margin-top: 5px;
-        }
-        
-        .location-box {
-            text-align: left;
-        }
-        
-        .location-box .venue {
-            font-family: 'Playfair Display', serif;
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 3vw, 1rem);
             color: #1a1a1a;
             font-weight: 500;
-            margin-bottom: 3px;
+            line-height: 1.3;
         }
         
-        .location-box .address {
-            font-size: 0.7rem;
+        .info-item .address {
+            font-size: clamp(0.55rem, 2vw, 0.7rem);
             color: #555;
-            line-height: 1.4;
+            line-height: 1.3;
+            margin-top: 2px;
         }
         
         /* Info section */
         .info-section {
             margin: 25px 0 20px;
-            padding: 20px 0;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            padding: 20px 10px;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
         }
         
         .info-text {
@@ -187,9 +166,8 @@
         
         /* Footer */
         .footer {
-            padding: 20px 30px 15px;
+            padding: 20px 20px 15px;
             text-align: center;
-            background: #fff;
         }
         
         .footer-text {
@@ -221,25 +199,17 @@
             display: block;
         }
         
-        @media (max-width: 520px) {
-            body { padding: 12px; }
-            .content { padding: 30px 20px 20px; }
-            .footer { padding: 18px 20px 12px; }
-            
-            .date-row { 
-                flex-wrap: wrap;
-                gap: 15px;
+        @media (max-width: 400px) {
+            .info-item {
+                padding: 0 8px;
             }
             
-            .date-time-container {
-                display: flex;
-                gap: 15px;
+            .info-item .number {
+                font-size: 1.3rem;
             }
             
-            .location-box {
-                text-align: center;
-                width: 100%;
-                margin-top: 5px;
+            .info-item .venue {
+                font-size: 0.8rem;
             }
         }
     </style>
@@ -257,21 +227,19 @@
             <div class="ci-sposiamo">Vi invitano al loro matrimonio</div>
             
             <!-- Date, Time and Location row -->
-            <div class="date-row">
-                <div class="date-time-container" style="display: flex; gap: 15px;">
-                    <div class="date-box">
-                        <div class="number">21</div>
-                        <div class="label">Giugno 2026</div>
-                    </div>
-                    
-                    <div class="time-box">
-                        <div class="number">11:00</div>
-                        <div class="label">del mattino</div>
-                    </div>
+            <div class="info-row">
+                <div class="info-item">
+                    <div class="number">21</div>
+                    <div class="label">Giugno 2026</div>
                 </div>
                 
-                <div class="location-box">
-                    <div class="venue">Agriturismo Larice</div>
+                <div class="info-item">
+                    <div class="number">11:00</div>
+                    <div class="label">del mattino</div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="venue">Agriturismo<br>Larice</div>
                     <div class="address">Via Valeda 15,<br>Clusone (BG)</div>
                 </div>
             </div>
