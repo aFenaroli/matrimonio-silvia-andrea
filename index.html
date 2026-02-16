@@ -213,9 +213,56 @@
                 padding: 0 7px;
             }
         }
+        
+        /* =============================================
+           OVERLAY "GIRA IL TELEFONO" — solo mobile landscape
+           ============================================= */
+        .rotate-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: #f5f3ef;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .rotate-overlay .rotate-icon {
+            font-size: 3rem;
+            animation: wiggle 1.5s ease-in-out infinite;
+        }
+        
+        .rotate-overlay p {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-15deg); }
+            75% { transform: rotate(15deg); }
+        }
+        
+        @media (orientation: landscape) and (max-height: 500px) {
+            .rotate-overlay {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Overlay per landscape su mobile -->
+    <div class="rotate-overlay">
+        <div class="rotate-icon">📱</div>
+        <p>Per favore, ruota il telefono<br>in verticale</p>
+    </div>
+
     <div class="card">
         <!-- Content -->
         <div class="content">
